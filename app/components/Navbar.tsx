@@ -1,7 +1,7 @@
 const Navbar = () => {
   return (
     <div>
-      <header className="flex-shrink-0 bg-white h-14 md:h-16 border-b flex items-center justify-between px-4 lg:px-8 z-30 shadow-sm relative">
+      <header className="flex-shrink-0 h-14 md:h-16 border-b-gray-300 flex items-center justify-between px-4 lg:px-8 z-30 shadow-sm relative">
         <div className="flex items-center gap-2 cursor-pointer">
           <img
             src="https://myspace.3khome.vn/logo/logo-3k-home-warehouse-stock.png"
