@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 // import { Schibsted_Grotesk, Martian_Mono } from "next/font/google";
 import { Lexend } from "next/font/google";
 import "./globals.css";
-import Header from "./components/Header";
+import Header from "../components/Header";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 
 const lexend = Lexend({
@@ -22,14 +22,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossOrigin="anonymous" referrerPolicy="no-referrer" />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+          crossOrigin="anonymous"
+          referrerPolicy="no-referrer"
+        />
       </head>
       <body className={`${lexend.className} antialiased`}>
         <LanguageProvider>
           <Header />
-          <main className="flex-1 flex flex-col md:flex-row overflow-hidden relative">
-            {children} 
-          </main>
+          {children}
         </LanguageProvider>
       </body>
     </html>

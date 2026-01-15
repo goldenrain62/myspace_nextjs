@@ -1,11 +1,21 @@
-const SampleLibrary = () => {
+"use client";
+
+import { useLanguage } from "@/hooks/useLanguage";
+import { translations } from "@/lib/translations";
+import { useEffect } from "react";
+
+const SampleGallery = () => {
+  const { lang } = useLanguage();
+  const t = translations[lang];
+
   return (
     <div className="space-y-4 pt-2">
       <div className="flex items-center justify-between border-b border-gray-200 pb-2">
-        <h3 className="text-lg font-bold text-gray-800">Thư viện phòng mẫu</h3>
+        <h3 className="text-lg font-bold text-gray-800">{t.tab_all}</h3>
       </div>
-      {/* <div className="grid grid-cols-3 lg:grid-cols-4 gap-2 md:gap-4">
-        {ALL_PRESET_IMAGES.map((imgSrc, idx) => (
+      <div className="grid grid-cols-3 lg:grid-cols-4 gap-2 md:gap-4">
+        Sample pics are displayed here.
+        {/* {ALL_PRESET_IMAGES.map((imgSrc, idx) => (
           <button
             key={idx}
             onClick={() => handlePresetSelect(imgSrc)}
@@ -18,10 +28,10 @@ const SampleLibrary = () => {
               loading="lazy"
             />
           </button>
-        ))}
-      </div> */}
+        ))} */}
+      </div>
     </div>
   );
 };
 
-export default SampleLibrary;
+export default SampleGallery;
